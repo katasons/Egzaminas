@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administratoriaus puslapis</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+h3 {
+    margin-top: 20px;
+    color: #007bff;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+input[type="text"],
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+</style>
+<body>
+    <div class="container">
+        <h2>Administratoriaus puslapis</h2>
+        <h3>Kategorijų valdymas</h3>
+        <form action="kategorijosKnygos.php" method="post">
+            <label for="category_name">Kategorijos pavadinimas:</label>
+            <input type="text" id="category_name" name="category_name">
+            <input type="submit" value="Pridėti kategoriją">
+        </form>
+
+        <h3>Knygų valdymas</h3>
+        <form action="knygosPridejimas.php" method="post">
+            <label for="book_title">Knygos pavadinimas:</label>
+            <input type="text" id="book_title" name="book_title">
+            <label for="category_id">Kategorijos ID:</label>
+            <input type="text" id="category_id" name="category_id">
+            <input type="submit" value="Pridėti knygą">
+        </form>
+    </div>
+</body>
+</html>
